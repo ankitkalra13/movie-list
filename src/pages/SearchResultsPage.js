@@ -21,6 +21,7 @@ const SearchResultsPage = ({ searchQuery }) => {
       setIsLoading(false);
     } catch (error) {
       console.error('Error fetching movies:', error);
+      setIsLoading(false);
     }
   }, []);
 
