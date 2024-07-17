@@ -60,7 +60,7 @@ const SearchResultsPage = ({ searchQuery }) => {
             </div>
           <Pagination
             currentPage={currentPage}
-            totalPages={Math.ceil(totalResults / 20)} // 20 results per page
+            totalPages={Math.ceil(totalResults / 20)}
             onPageChange={handlePageChange}
           />
         </>

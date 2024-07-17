@@ -18,9 +18,9 @@ const Loader = ({ loading }) => {
         }}
       >
         <img
-          src="/assets/new-spinner.svg" // Replace this with the path to your loader image
+          src="/assets/new-spinner.svg" 
           alt="Loading..."
-          style={{ width: '120px', height: '120px' }} // Adjust the size as needed
+          style={{ width: '120px', height: '120px' }}
         />
       </div>
     )

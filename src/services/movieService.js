@@ -13,7 +13,6 @@ export const searchMovies = async (query, page = 1) => {
   }
 };
 
-// Example using fetch API to handle pagination for 10 results per page
 export const getDefaultMovies = async (page = 1) => {
   const response = await fetch(`${BASE_URL}/?apikey=${API_KEY}&s=movie&type=movie&page=${page}`);
   const data = await response.json();
@@ -22,7 +21,7 @@ export const getDefaultMovies = async (page = 1) => {
     const totalResults = parseInt(data.totalResults);
     const totalPages = Math.ceil(totalResults / 10); 
 
-    // Fetching additional pages for 20 movies
+    // pages for 20 movies
     let movies = data.Search;
     let currentPage = page;
 
@@ -33,7 +32,7 @@ export const getDefaultMovies = async (page = 1) => {
       movies = movies.concat(nextPageData.Search);
     }
 
-    // Slice to ensure only 20 movies are returned
+    // Slice 20 movies 
     movies = movies.slice(0, 20);
 
     return { totalResults, movies };
